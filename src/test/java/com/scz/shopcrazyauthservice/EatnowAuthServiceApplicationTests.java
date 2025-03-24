@@ -1,9 +1,10 @@
-package com.scz.authservice;
+package com.scz.shopcrazyauthservice;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ShopCrazyAuthServiceApplicationTests {
+class EatnowAuthServiceApplicationTests {
 
     //@Test
     void contextLoads() {

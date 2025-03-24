@@ -1,6 +1,5 @@
-package com.scz.authservice.domain.repository;
+package com.scz.shopcrazyauthservice;
 
-import com.scz.authservice.domain.model.Token;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

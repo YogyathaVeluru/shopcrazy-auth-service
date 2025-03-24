@@ -1,7 +1,5 @@
-package com.scz.authservice.application;
+package com.scz.shopcrazyauthservice;
 
-import com.scz.authservice.domain.model.Token;
-import com.scz.authservice.domain.repository.TokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +10,7 @@ public class TokenService {
 
 
     @Autowired
-    public TokenRepository tokenRepository;
+    TokenRepository tokenRepository;
 
     public Token generateToken(String username) {
 

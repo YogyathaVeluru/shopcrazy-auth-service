@@ -1,6 +1,5 @@
-package com.scz.authservice.domain.repository;
+package com.scz.shopcrazyauthservice;
 
-import com.scz.authservice.domain.model.Credential;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CredentialRepository extends JpaRepository<Credential, String> {

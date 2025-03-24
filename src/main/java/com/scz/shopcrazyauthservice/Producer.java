@@ -1,4 +1,4 @@
-package com.scz.authservice.domain.model;
+package com.scz.shopcrazyauthservice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

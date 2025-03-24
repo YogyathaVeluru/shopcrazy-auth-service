@@ -1,12 +1,6 @@
-package com.scz.authservice.interfaces;
+package com.scz.shopcrazyauthservice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.scz.authservice.domain.model.Credential;
-import com.scz.authservice.domain.model.Producer;
-import com.scz.authservice.domain.model.Token;
-import com.scz.authservice.application.TokenService;
-import com.scz.authservice.domain.repository.CredentialRepository;
-import com.scz.authservice.domain.repository.TokenRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

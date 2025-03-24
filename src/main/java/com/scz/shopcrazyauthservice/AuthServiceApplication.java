@@ -1,13 +1,13 @@
-package com.scz.authservice;
+package com.scz.shopcrazyauthservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShopCrazyAuthServiceApplication {
+public class AuthServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ShopCrazyAuthServiceApplication.class, args);
+        SpringApplication.run(AuthServiceApplication.class, args);
     }
 
 }

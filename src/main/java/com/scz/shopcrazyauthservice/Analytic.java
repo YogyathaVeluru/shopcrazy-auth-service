@@ -1,4 +1,11 @@
-package com.scz.authservice.domain.model;
+package com.scz.shopcrazyauthservice;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+import java.time.LocalTime;
 
 public class Analytic {
 

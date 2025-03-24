@@ -1,4 +1,4 @@
-package com.scz.authservice.domain.model;
+package com.scz.shopcrazyauthservice;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
