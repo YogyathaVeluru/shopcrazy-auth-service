@@ -30,7 +30,7 @@ public class MainRestController {
         log.info("Received request to signup: {}", credential);
         credentialRepository.save(credential);
         log.info("User signed up successfully: {}", credential);
-        //producer.publishAuthDatum(credential.getUsername(), "SIGNUP");
+        producer.publishAuthDatum(credential.getUsername(), "SIGNUP");
         return ResponseEntity.ok("User signed up successfully");
     }
 
@@ -48,7 +48,7 @@ public class MainRestController {
         {
             //More to be done here - Token to  be sent to the user
             log.info("User logged in successfully: {}", credential);
-           // producer.publishAuthDatum(credential.getUsername(), "LOGIN");
+            producer.publishAuthDatum(credential.getUsername(), "LOGIN");
             return ResponseEntity.ok().
                     header("Authorization", tokenService.generateToken(user.getUsername()).getTokenid().toString()).
                     body("User logged in successfully");
@@ -67,11 +67,13 @@ public class MainRestController {
         {
             String username = tokenRepository.findById(Integer.valueOf(tokenArray[1])).get().getUsername();
             log.info("Token is valid");
-           // producer.publishAuthDatum(username, "VALIDATED");
-            return ResponseEntity.ok("valid");
+            producer.publishAuthDatum(username, "VALIDATED");
+            ValidateResponse response = ValidateResponse.builder().valid(true).username(username).build();
+            return ResponseEntity.ok(response);
         }
         log.info("Token is invalid");
-        return ResponseEntity.ok("invalid");
+        ValidateResponse response = ValidateResponse.builder().valid(false).username(null).build();
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("logout")
@@ -92,7 +94,7 @@ public class MainRestController {
 
         log.info("Token updated: {}", token);
         String username = tokenRepository.findById(Integer.valueOf(tokenArray[1])).get().getUsername();
-       // producer.publishAuthDatum(username, "LOGGEDOUT");
+        producer.publishAuthDatum(username, "LOGGEDOUT");
         return ResponseEntity.ok("logged out successfully");
     }
 
